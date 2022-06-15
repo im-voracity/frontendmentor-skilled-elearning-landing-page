@@ -1,0 +1,497 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap");
+:root {
+  /* -- Colors -- */
+  --grayish-blue: hsl(234, 25%, 52%);
+  --dark-blue: hsl(233, 54%, 16%);
+  --gray: hsl(232, 10%, 56%);
+  --hot-pink: hsl(341, 92%, 62%);
+  --light-pink: hsl(341, 100%, 83%);
+  --white: hsl(0, 0%, 100%);
+  --gradient-1: linear-gradient(
+    to bottom,
+    hsl(13, 100%, 64%),
+    hsl(322, 87%, 55%)
+  );
+  --gradient-2: linear-gradient(
+    to bottom,
+    hsl(237, 100%, 64%),
+    hsl(322, 87%, 55%)
+  );
+
+  /* -- Padding/Margin/Etc -- */
+  --min-padding: 10.3125rem;
+  --menu-padding: 2.4219rem 10.3619rem;
+  --section-height: 43.75rem;
+  --card-height: 21.625rem;
+  --card-width: 21.875rem;
+  --card-padding: 4rem 2rem 2.5rem;
+  --in-card-gap: 1.5rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ---------- Globals ---------- */
+
+.mobile,
+.tablet {
+  display: none;
+}
+
+main {
+  background-image: linear-gradient(
+    hsl(0, 0%, 100%) 35%,
+    hsl(240, 100%, 97.5%)
+  );
+}
+
+.heading {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: var(--dark-blue);
+}
+
+.heading.xl {
+  display: flex;
+  flex-direction: column;
+  max-width: 457px;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 3.5rem;
+  margin-bottom: 1.8125rem;
+}
+
+.heading.l {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 3.1875rem;
+}
+
+.heading.m {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 2.5rem;
+}
+
+.heading.s {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.75rem;
+}
+
+.body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: var(--gray);
+}
+
+.body.m {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.75rem;
+  max-width: 445px;
+}
+
+.body.s {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+.button {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: var(--white);
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  padding: 14px 32px;
+  border-radius: 28px;
+  transition: 0.3s;
+  z-index: 100;
+}
+
+.button.t1 {
+  background-color: var(--dark-blue);
+}
+
+.button.t1:hover {
+  background-color: var(--grayish-blue);
+}
+
+.button.t2 {
+  background-image: var(--gradient-1);
+}
+
+.button.t2:hover {
+  background-image: linear-gradient(
+    to bottom,
+    hsla(322, 87%, 55%, 0.6),
+    hsla(13, 100%, 64%, 0.6)
+  );
+}
+
+.button.t3 {
+  background-image: var(--gradient-2);
+}
+
+.button.t3:hover {
+  background-image: linear-gradient(
+    to bottom,
+    hsla(237, 100%, 75%, 1),
+    hsla(322, 87%, 66%, 1)
+  );
+}
+
+.button.t4 {
+  color: var(--hot-pink);
+  padding: 0;
+}
+.button.t4:hover {
+  color: hsla(341, 92%, 62%, 0.6);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  height: var(--card-height);
+  width: var(--card-width);
+  background-color: white;
+  padding: var(--card-padding);
+  border-radius: 15px;
+  gap: var(--in-card-gap);
+  -moz-box-shadow: 15px 5px 25x rgba(0, 0, 0, 0.03);
+  -webkit-box-shadow: 15px 5px 25px rgba(0, 0, 0, 0.03);
+  box-shadow: 15px 5px 25px rgba(0, 0, 0, 0.03);
+  transition: 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translate(0, -1.1rem);
+}
+
+.card-icon {
+  position: absolute;
+  top: -8%;
+}
+
+/* ---------- Header ---------- */
+header {
+  width: 100%;
+}
+
+.menu {
+  height: 100%;
+  width: 100%;
+  padding: var(--menu-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* ---------- First Section ---------- */
+.firstFolder {
+  height: var(--section-height);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: var(--min-padding);
+}
+
+.firstFolder .body.m {
+  margin-bottom: 2.5rem;
+}
+
+.right {
+  height: 100%;
+  max-width: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+/* ---------- Second Section ---------- */
+.grid {
+  padding: 0 var(--min-padding) 8.75rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 3.5rem;
+}
+
+#bg-gradient {
+  background-image: var(--gradient-1);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#bg-gradient .heading {
+  color: var(--white);
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  background-color: var(--dark-blue);
+}
+
+@media screen and (max-width: 1000px) and (min-width: 501px) {
+  :root {
+    --min-padding: 2.4375rem;
+    --menu-padding: 1.5rem 2.4375rem;
+    --section-height: 40rem;
+    --card-height: 16.5625rem;
+    --card-width: 21.1875rem;
+    --card-padding: 3.5rem 1.375rem 2rem 2rem;
+    --in-card-gap: 1rem;
+  }
+
+  /* ---------- Globals ---------- */
+
+  .desktop,
+  .mobile {
+    display: none;
+  }
+
+  .tablet {
+    display: block;
+  }
+
+  .heading.xl {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 3.1875rem;
+  }
+
+  .heading.m {
+    font-size: 1.5rem;
+  }
+  .heading.s {
+    font-size: 1.25rem;
+  }
+  .body.m {
+    font-size: 1rem;
+    max-width: 398px;
+  }
+
+  /* ---------- Header ---------- */
+
+  header {
+    width: 100%;
+    position: absolute;
+  }
+
+  .menu {
+    height: 100%;
+    width: 100%;
+    padding: var(--menu-padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* ---------- First Section ---------- */
+  .firstFolder {
+    height: 43.75rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: var(--min-padding);
+  }
+
+  .firstFolder .body.m {
+    margin-bottom: 2.5rem;
+  }
+
+  .right {
+    height: 100%;
+    width: 35%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+
+  .tablet {
+    position: absolute;
+    bottom: 5%;
+    left: -35%;
+  }
+
+  /* ---------- Second Section ---------- */
+  .grid {
+    padding: 0 var(--min-padding) 8.75rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+    column-gap: 0.6875rem;
+  }
+
+  #bg-gradient {
+    background-image: var(--gradient-1);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  #bg-gradient .heading {
+    color: var(--white);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --min-padding: 1rem;
+    --menu-padding: 1rem;
+    --section-height: 41.875rem;
+    --card-height: 16.1875rem;
+    --card-width: 21.4375rem;
+    --card-padding: 3.5rem 1.8125rem 2rem 1.75rem;
+    --in-card-gap: 1rem;
+  }
+
+  .desktop,
+  .tablet {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .heading.xl {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 3.1875rem;
+  }
+
+  .heading.m {
+    font-size: 1.5rem;
+  }
+  .heading.s {
+    font-size: 1.25rem;
+  }
+  .body.m {
+    font-size: 1rem;
+    max-width: 398px;
+  }
+
+  .button {
+    font-size: 1rem;
+  }
+
+  .card {
+    margin: auto;
+  }
+
+  header {
+    width: 100%;
+    position: relative;
+  }
+
+  .menu {
+    height: 100%;
+    width: 100%;
+    padding: var(--menu-padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .firstFolder {
+    height: 43.75rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+  }
+
+  .left {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: var(--min-padding);
+  }
+
+  .firstFolder .body.m {
+    margin-bottom: 2.5rem;
+  }
+
+  .right {
+    height: 50%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tablet {
+    position: absolute;
+    bottom: 5%;
+    left: -35%;
+  }
+
+  .grid {
+    padding: 0 var(--min-padding) 8.75rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    column-gap: 0.6875rem;
+  }
+
+  #bg-gradient {
+    background-image: var(--gradient-1);
+    height: 8rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  #bg-gradient .heading {
+    color: var(--white);
+  }
+}
